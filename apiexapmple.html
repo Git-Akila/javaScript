@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Fetching</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cosmo/bootstrap.min.css" >
+</head>
+<style>
+    img{
+        width:100px;
+    }
+</style>
+<body>
+    <h1 class="text-center">Storing API data in Table </h1>
+    <div class="container">
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Image</th>
+                </tr>
+                <tbody id="table_body">
+
+                </tbody>
+            </thead>
+        </table>
+
+    </div>
+    <script>
+        fetch('https://fakestoreapi.com/products')
+        .then((res) =>{
+            return res.json();
+        })
+        .then((msg)=>{
+            console.log(msg)
+            let tableData=" ";
+            msg.map((values=>{
+                tableData+=`<tr>
+                    <td>${values.title}</td>
+                    <td>${values.description}</td>
+                    <td>${values.price}</td>
+                    <td><img src="${values.image}"/></td>
+                    </tr>`
+            }));
+            document.getElementById("table_body").innerHTML=tableData;
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[4,5,6,7]
+        let findsum= (arr)=>{
+            let sum=0
+            for(let val of arr){
+                sum+=val
+            }
+            return sum
+        }
+        console.log(findsum(arr))
+
+        let area= r=>Math.PI*r*r
+        console.log(area(5))
+
+
+        //rest parameter
+        let prod =function(...args){
+            let result=1
+            for(let val of args){
+                result*=val
+                
+            }
+            return result
+
+        }
+        console.log(prod(2,4,6,7,8))
+
+        let pro=function(...args){
+            let result=0
+            for(let val of args){
+                result+=val
+            }
+            return result
+        }
+        console.log(pro(7,4,3,2))
+
+
+        //arguments
+        let prod2=function(){
+            let result=1
+            for(let i=0;i<arguments.length;i++){
+                result *= arguments[i]
+                
+            }
+            return result
+        }
+        console.log(prod2(7,4,5,6))
+
+        //generators
+        
+    </script>
+</body>
+</html>

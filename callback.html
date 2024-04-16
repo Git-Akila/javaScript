@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        function greet1(name){
+            console.log('hello',name)
+
+        }
+        function greet2(name){
+            const heading=document.querySelector('h1')
+            heading.innerHTML='hello' +name
+        }
+
+        function greet(callback){
+            callback('Ram')
+
+        }
+
+        greet(greet1)
+        greet(greet2)
+
+        //arrow function
+        //ForEach
+
+        arr=['deepa','aki','akila']
+        arr.forEach(element => {
+            console.log(element)
+            
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      {/* var sum=function(num,target){
+            let map=new Map()
+                for(let i=0;i<num.length;i++){
+                    let compliment=target-nums[i]
+                    if(map.has(compliment))
+                    return [map.get(compliment),i]
+                 map.set(nums[i],i)
+                    
+            }
+        }
+
+
+        // count the one 
+        
+        var haming=function(n){
+            let count=0
+            for(let i=1;i<=32;i++)
+                count +=n&1
+                n=n>>1
+        }
+    return count     */}
+
+        //anagram
+        let s="car"
+        let t="rac"
+       // console.log(s)
+        var isAnagram=function(s,t)
+                {
+                    let map=new Map()
+                    if(s.length != t.length){
+                        return false
+                    }
+                    for(let i=0;i<s.length;i++){
+                            if(map[s[i]])
+                                map[s[i]]++
+                            else
+                            map[s[i]] = 1}
+                        for(let i=0;i<t.length;i++){
+                            if(map(t[i]))
+                                map[t[i]]--
+                            else
+                            return false
+                        }
+                        return true
+                }
+
+                //layout substring
+                // Remove same String
+                var lengthofString=function(){
+                    let mxlength=0
+                    let currString=[]
+                    for(let i=0;i<s.length){
+                        s[i]
+                    }
+                }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            /* Hide overflowing content */
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+            /* Smooth transition between slides */
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            /* Each slide takes up the full width */
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="slide">
+                Slide 1
+            </div>
+            <div class="slide">
+                Slide 2
+            </div>
+            <div class="slide">
+                Slide 3
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+    </div>
+
+
+    <!----------------------------------------------------------------------------------------------------------->
+    <script>
+        // Auto-scrolling functionality (optional)
+        const carouselWrapper = document.querySelector('.carousel-wrapper');
+        setInterval(() => {
+            carouselWrapper.style.transform = 'translateX(-100%)';
+            setTimeout(() => {
+                carouselWrapper.appendChild(carouselWrapper.firstElementChild);
+                carouselWrapper.style.transition = 'none';
+                carouselWrapper.style.transform = 'translateX(0)';
+                setTimeout(() => {
+                    carouselWrapper.style.transition = 'transform 0.5s ease';
+                });
+            }, 500);
+        }, 3000); // Change interval for auto-scrolling speed (milliseconds)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr=[
+            {name:'akil',age:15},
+            {name:'akila',age:12},
+            {name:'aki',age:10},
+            {name:'111',age:45},
+        ]
+        const ages=arr.map(x=>x.age)
+        console.log(ages)
+
+        //filter
+        const cost=[23,44,55,32,100]
+        let a=cost.filter(x=>x<50)
+        console.log(a);
+
+        const arr2=['a','b','c','d','e','f','g','h','a','b','c']
+           // console.log(arr2);
+           const arr3=arr2.flat().reduce(
+                (accumulator,currval)=>{
+                    if(accumulator[currval])
+                    accumulator[currval]++
+                else
+                accumulator[currval]=1
+                    return accumulator},
+
+                
+           {});
+           console.log(arr3)
+
+                        //find the number
+
+                        a=[1,-2,3,4,5,-1]
+                       // console.log(a.flat())
+                       let odd=a.filter(x=> x<0)
+                       console.log(odd);
+                       let even=a.filter(x=> x>0)
+                       console.log(even)
+                    
+                    //Remove value
+                  const  int=[1,2,3,4,5,6,1]
+                    let remove=int.flat().reduce(
+                        (accumulator,currval)=>{
+                            if(accumulator[currval])
+                            accumulator[currval]
+                        else{
+                            return accumulator
+                        }
+                        },
+                    {});
+                    console.log(int)
+                        //clouser
+                        function makeAdder(x){
+                            return function(y){
+                                return x+y
+                            }
+                        }
+
+                        let add5=makeAdder(5)
+                        console.log(add5(10))
+
+                        console.log(add5(5))
+
+                        let add1=makeAdder(100)
+                        console.log(add1(9))
+    </script>
+</body>
+</html>

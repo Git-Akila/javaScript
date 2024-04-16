@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Select a city</h2>
+    <div class="inputdiv">
+    <select name="city" id="input">
+        <option value="chennai">Chennai</option>
+        <option value="bengaluru">bangaluru</option>
+        <option value="selam">Selem</option>
+        <option value="tiruchi">Tiruchi</option>
+    </select>
+</div>
+<div>
+    <button type="submit">Show</button>
+</div></div>
+   <script>
+    // eventListener
+        const button=document.querySelector('button');
+        button.addEventListener('click',display)
+//creating div for result another method
+        let resultdiv=document.createElement('div')
+        resultdiv.id="result"
+
+        document.getElementById('wrapper').appendChild(resultdiv)
+//creating Function
+         function  display(){
+            let population=0, literacyRate=0, language=0;
+        const input=document.getElementById("input")
+        const city=input.options[input.selectedIndex].value
+
+
+        switch(city){
+            case 'chennai':
+                population=8484788
+                literacyRate= 88.71
+                language= 'kannada'
+                break
+            case 'bengaluru':
+                population=6788999
+                literacyRate=89.11
+                language="tamil"
+                break
+            case 'selam':
+                population=8899
+                literacyRate=90.2
+                language='tamil'
+                break
+            case 'tiruchi':
+                population=99988
+                literacyRate=9.1
+                language='tamil'
+                break
+        }
+
+
+        let text=`The wonderful city of ${city} has really amazing. the ${language} they are speaking ${literacyRate} 
+        the population is ${population} `
+        //console.log(text) 
+                
+        
+        document.getElementById('result').innerHTML=text
+        }
+        
+
+        
+        //event listener
+       
+
+   </script> 
+</body>
+</html>

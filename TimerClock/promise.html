@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const talkalBook = new Promise((resolve, reject) => {
+            let bookingSuccess = true
+            if (bookingSuccess)
+                resolve()
+            else
+                reject()
+
+        })
+
+        function success() {
+            console.log("Thank you for your help");
+        }
+        function failure() {
+            console.log("Thank you for Trying");
+        }
+        talkalBook.then(success)
+            .catch(failure)
+
+
+
+        //function
+
+        function talk() {
+            return new Promise((resolve, reject) => {
+                let bookingSuccess = true
+
+                if (bookingSuccess)
+                    resolve(30)
+                else
+                    reject()
+            })
+        }
+
+        talk().then((amt) => console.log(`Thank you ${amt}`))
+            .catch(() => console.log("Thanks for trying....."));
+
+
+            //*********************************************//
+            let reachA=new Promise((resolve,reject)=>{
+                const reached=true
+                if(reached)
+                setTimeout(resolve,3000,"vidya reached")
+            else
+            reject('vidya not reached')
+            })
+
+            let   reachB=new Promise((resolve,reject)=>{
+                const reached=true
+                if(reached)
+                setTimeout(resolve,1000,"Aki reached")
+            else 
+            reject('Akila not reached')
+            })
+            let reachC=new Promise((resolve,reject)=>{
+                const reached=true
+                if(reached)
+                setTimeout(resolve,2000,"aki reached")
+            else
+            reject('aki not reached')
+            })
+           
+            Promise.all([reachA,reachB,reachC])
+            .then((message)=>console.log(message))
+            .catch((message)=>console.log(message))
+
+            // .race
+
+            Promise.race([reachA,reachB,reachC])
+            .then((message)=>console.log(message))
+            .catch((message)=>console.log(message))
+    </script>
+</body>
+
+</html>

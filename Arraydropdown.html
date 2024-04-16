@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select">
+        <option>Choose a number</option>
+    </select>
+    <script>
+       const arr=['ECE','CSE','IT','EEE']
+       const select=document.getElementById('select')
+      
+       for(var i=0;i<arr.length;i++){
+            var opt=arr[i];
+            var e1=document.createElement("option")
+             e1.textContent=opt;
+           e1.value=opt;
+           select.appendChild(e1);
+       }
+
+    </script>
+</body>
+</html>

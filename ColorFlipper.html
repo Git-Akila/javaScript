@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap1">
+        <p id="para">#FFFFFF</p>
+    
+    <button type="submit" id="bttn">Click me</button>
+</div>
+    <script>
+        const btn=document.getElementById('bttn')
+            const b=document.getElementById('wrap1')
+            const c=document.getElementById('para')
+            
+            const hex=[0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+
+            btn.addEventListener('click',colorChange) 
+
+            function colorChange(){
+                let color= '#'
+                for(let i=1;i<=6;i++){
+                    color=color+ hexrandom()
+                }
+                b.style.backgroundColor=color;
+                
+                c.innerHTML=color;
+               // console.log(color);
+           }    
+
+          // console.log(hexrandom());
+
+            function hexrandom(){
+                let randomindex=Math.floor(Math.random()*16)
+                return hex[randomindex]
+                
+            }
+    </script>
+</body>
+</html>

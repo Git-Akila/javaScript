@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="input">
+        <input type="radio" id="ra1" value="rad1">
+        <label>Illiterate</label></input>
+        <input type="radio" id="ra2" value="rad2">
+        <label>HighSchool</label></input>
+        <input type="radio" id="ra3" value="rad3">
+        <lable >UG</lable></input>
+        <input type="radio" id="ra4" value="rad4">
+        <label>PG</label></input>
+    </div>
+
+    <button type="submit">Submit</button>
+
+    
+    <script>
+      const  button=document.getElementById('button')
+        button.addEventListener('click',radio)
+
+        let resultdiv=document.createElement('div')
+        resultdiv.id="result"
+        
+        function radio(){
+            const input=document.getElementById('input')
+            const text=input.radio[input.ariaSelected]
+            let one='graduated',two='ungraduated'
+
+            switch(text){
+                case 'rad1':
+                text1=`Graduated ${one}`
+             document.getElementById('result').innerHTML=text1;
+             break
+
+            }
+
+            text1=`Graduated ${one}`
+            document.getElementById('result').innerHTML=text1;
+        }
+    </script>  
+</body>
+</html>
