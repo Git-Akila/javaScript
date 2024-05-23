@@ -58,3 +58,21 @@ for(let i=0;i< aa.length;i++){
     }
 }
 console.log(upper);
+___________________________________________Prime or not 1, 2,3, 5, 7, 11________________________________________________________//
+const a=prompt("Enter the Number:");
+    let isPrime=true;
+    if(a==1){
+        console.log("The num is Prime");
+    }else if(a>1){
+        for(let i=2;i< a;i++){
+            if(a%i==0)
+            isPrime=false;
+        break;
+
+        }
+    }
+    if(isPrime){
+        console.log("number is a prime number");
+    }else{
+        console.log("Number is not a Prime Number");
+    }
