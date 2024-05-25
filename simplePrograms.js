@@ -105,3 +105,10 @@ const a=parseInt(prompt("Enter the first number:"));
       const b=parseFloat(prompt("Enter the second number:"));
       const c=Math.max(a,b);
      console.log(c);
+// ________________SumOfArray____________________________________________________________________
+ let a=[1,2,3,4];
+     
+     const sumofnum=()=>{
+        return  a.reduce((acc,curr)=>{return acc+curr})
+     }
+      console.log(sumofnum())
