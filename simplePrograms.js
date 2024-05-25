@@ -112,3 +112,21 @@ const a=parseInt(prompt("Enter the first number:"));
         return  a.reduce((acc,curr)=>{return acc+curr})
      }
       console.log(sumofnum())
+
+
+
+// ______________Prime number__________________________________________________________________________
+const a=parseInt(prompt("Enter the Number:"));
+     const b=parseInt(prompt("Enter the second number:"));
+     for(let i=a;i<=b;i++){
+        let flate=0;
+        for(let j=2;j<i;j++){
+            if(i%j==0){
+                flate=1;
+                break;
+            }
+            if(i>1&& flate==0){
+                console.log("The Prime num is:"+i)
+            }
+        }
+     }
