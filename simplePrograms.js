@@ -76,3 +76,18 @@ const a=prompt("Enter the Number:");
     }else{
         console.log("Number is not a Prime Number");
     }
+
+
+// Greatest among 3 numbers
+
+ const a=prompt("Enter the first number:");
+        const b=prompt("Enter the second number:");
+        const c=prompt("Enter the third number:");
+        if(a>b && a>c){
+            console.log("The A is a Biggest number...");
+
+        }else if(b>a && b> c){
+            console.log("B is the Biggest number");
+        }else{
+            console.log("C is the gratest one");
+        }
