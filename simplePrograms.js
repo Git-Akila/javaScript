@@ -99,3 +99,9 @@ const a=parseFloat(prompt("Enter the First Number :"));
 
        const d=Math.max(a,b,c);
        console.log("The Greatest number is" +d);
+
+
+const a=parseInt(prompt("Enter the first number:"));
+      const b=parseFloat(prompt("Enter the second number:"));
+      const c=Math.max(a,b);
+     console.log(c);
