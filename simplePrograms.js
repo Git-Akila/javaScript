@@ -91,3 +91,11 @@ const a=prompt("Enter the Number:");
         }else{
             console.log("C is the gratest one");
         }
+
+// _________________________________________________Greatest number among 3 numbers using build in method________________________________________________________
+const a=parseFloat(prompt("Enter the First Number :"));
+       const b=parseFloat(prompt("Enter the second Number"));
+       const c=parseFloat(prompt("Enter the Third Number:"));
+
+       const d=Math.max(a,b,c);
+       console.log("The Greatest number is" +d);
